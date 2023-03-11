@@ -1,13 +1,11 @@
 export interface IDisneylandTrip {
-  hotel: number;
   flight: number;
-  averageBreakfast: number;
-  averageLunch: number;
-  averageDinner: number;
-  parkTickets: number;
-  days: number;
+  hotel: number;
+  "park-tickets": number;
+  food: number,
   car: number;
   parking: number;
   souvenirs: number;
+  days: number;
   total: number;
 }

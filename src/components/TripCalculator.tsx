@@ -20,11 +20,7 @@ function TabPanel(props: ITabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -46,7 +42,7 @@ export default function TripCalculator() {
   return (
     <Container
       sx={{
-        backgroundColor: theme.palette.secondary.dark,
+        backgroundColor: theme.palette.primary.light,
         borderRadius: "8px",
         boxShadow: "0 3px 5px 0 #555",
       }}
@@ -57,6 +53,7 @@ export default function TripCalculator() {
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
+          textColor="secondary"
         >
           <Tab label="Disneyland" {...a11yProps(0)} />
           <Tab label="Disney World" {...a11yProps(1)} />
